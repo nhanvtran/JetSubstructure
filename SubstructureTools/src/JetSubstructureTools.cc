@@ -127,11 +127,10 @@ float JetSubstructureTools::getTau( int N, float kappa ){
 // -------------------------------------------
 // Groomers
 // -------------------------------------------
-fastjet::PseudoJet JetSubstructureTools::getJet(){
-    
-    return jet0_full_;
-    
-}
+fastjet::PseudoJet JetSubstructureTools::getJet(){ return jet0_full_; }
+fastjet::PseudoJet JetSubstructureTools::getJet_wGhostes(){ return jet0_full_wGhosts_; }
+fastjet::PseudoJet JetSubstructureTools::getJet_basic(){ return jet0_basic_; }
+
 fastjet::PseudoJet JetSubstructureTools::getPrunedJet( float zcut, float rcut ){
     
     fastjet::Pruner pruner(fastjet::cambridge_algorithm, zcut, rcut);
