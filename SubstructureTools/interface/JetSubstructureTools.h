@@ -37,6 +37,8 @@ class JetSubstructureTools {
     
     // Grooming
     fastjet::PseudoJet getJet();
+    fastjet::PseudoJet getJet_wGhostes();
+    fastjet::PseudoJet getJet_basic();
     fastjet::PseudoJet getPrunedJet( float zcut = 0.1, float rcut = 0.5 );
     fastjet::PseudoJet getFilteredJet( float rfilt = 0.3, int nfilt = 3 );
     fastjet::PseudoJet getTrimmedJet( float rfilt = 0.2, float ptfrac = 0.03 );
