@@ -110,7 +110,10 @@ JetSubstructureTools::JetSubstructureTools( fastjet::JetDefinition jetDef, std::
     
     positives.push_back( 321 ); positives.push_back( 211 ); ; positives.push_back( -11 ); positives.push_back( -13); positives.push_back( 2212);
     negatives.push_back( -321 ); negatives.push_back( -211 ); negatives.push_back( 11 ); negatives.push_back( 13 );    
-    
+
+    thisClustering_->delete_self_when_unused();
+    thisClustering_wGhosts_->delete_self_when_unused();
+    thisClustering_basic_->delete_self_when_unused();		
 }
 
 // -------------------------------------------
